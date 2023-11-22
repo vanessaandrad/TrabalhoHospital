@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.EditarMedicoController">
+   <children>
+      <RadioButton fx:id="radioButtonNome" layoutX="58.0" layoutY="66.0" mnemonicParsing="false" text="nome">
+         <toggleGroup>
+            <ToggleGroup fx:id="EscolhaEdição" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioButtonEspecialidade" layoutX="59.0" layoutY="105.0" mnemonicParsing="false" text="espec" toggleGroup="$EscolhaEdição" />
+      <RadioButton fx:id="radioButtonCRM" layoutX="59.0" layoutY="143.0" mnemonicParsing="false" text="crm" toggleGroup="$EscolhaEdição" />
+      <TextField fx:id="textFieldEditar" layoutX="151.0" layoutY="110.0" promptText="Digite o novo dado" />
+      <Button fx:id="botaoEditar" layoutX="363.0" layoutY="110.0" mnemonicParsing="false" onAction="#editarDado" text="EDITAR" />
+      <RadioButton fx:id="radioButtonSenha" layoutX="58.0" layoutY="183.0" mnemonicParsing="false" text="senha" />
+      <RadioButton fx:id="radioButtonPlano" layoutX="59.0" layoutY="219.0" mnemonicParsing="false" text="plano" />
+   </children>
+</AnchorPane>
