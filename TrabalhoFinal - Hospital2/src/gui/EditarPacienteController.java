@@ -15,16 +15,16 @@ import javafx.scene.control.ToggleGroup;
 import model.entities.MedicoLogado;
 import gui.TelaLoginMedicoController;
 
-public class EditarMedicoController {
+public class EditarPacienteController {
 
 	@FXML
 	private RadioButton radioButtonNome;
 
 	@FXML
-	private RadioButton radioButtonEspecialidade;
+	private RadioButton radioButtonIdade;
 
 	@FXML
-	private RadioButton radioButtonCRM;
+	private RadioButton radioButtonCPF;
 
 	@FXML
 	private RadioButton radioButtonPlano;
@@ -49,12 +49,12 @@ public class EditarMedicoController {
 		String dadoNovo = textFieldEditar.getText();
 
 		if (radioButtonNome.isSelected()) {
-			String updateQuery = "UPDATE medicoscadastrados " + "SET nome = ? " + "WHERE " + "crm = ?";
+			String updateQuery = "UPDATE pacientes " + "SET nome = ? " + "WHERE " + "cpf = ?";
 			try (Connection connection = DriverManager.getConnection(url, username, password);
 					PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
 
 				preparedStatement.setString(1, dadoNovo);
-				preparedStatement.setString(2, TelaLoginMedicoController.getcrmLogado());
+				preparedStatement.setString(2, TelaLoginPacienteController.getcpfLogado());
 
 				int rowsAffected = preparedStatement.executeUpdate();
 
@@ -71,13 +71,13 @@ public class EditarMedicoController {
 			return;
 		}
 
-		if (radioButtonEspecialidade.isSelected()) {
-			String updateQuery = "UPDATE medicoscadastrados " + "SET especialidade = ? " + "WHERE " + "crm = ?";
+		if (radioButtonIdade.isSelected()) {
+			String updateQuery = "UPDATE pacientes " + "SET idade = ? " + "WHERE " + "cpf = ?";
 			try (Connection connection = DriverManager.getConnection(url, username, password);
 					PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
 
 				preparedStatement.setString(1, dadoNovo);
-				preparedStatement.setString(2, TelaLoginMedicoController.getcrmLogado());
+				preparedStatement.setString(2, TelaLoginPacienteController.getcpfLogado());
 
 				int rowsAffected = preparedStatement.executeUpdate();
 
@@ -94,12 +94,12 @@ public class EditarMedicoController {
 			return;
 		}
 		if (radioButtonPlano.isSelected()) {
-			String updateQuery = "UPDATE medicoscadastrados " + "SET plano_atendido = ? " + "WHERE " + "crm = ?";
+			String updateQuery = "UPDATE pacientes " + "SET plano = ? " + "WHERE " + "cpf = ?";
 			try (Connection connection = DriverManager.getConnection(url, username, password);
 					PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
 
 				preparedStatement.setString(1, dadoNovo);
-				preparedStatement.setString(2, TelaLoginMedicoController.getcrmLogado());
+				preparedStatement.setString(2, TelaLoginPacienteController.getcpfLogado());
 
 				int rowsAffected = preparedStatement.executeUpdate();
 
@@ -116,12 +116,12 @@ public class EditarMedicoController {
 			return;
 		}
 		if (radioButtonSenha.isSelected()) {
-			String updateQuery = "UPDATE medicoscadastrados " + "SET senha = ? " + "WHERE " + "crm = ?";
+			String updateQuery = "UPDATE pacientes " + "SET senha = ? " + "WHERE " + "cpf = ?";
 			try (Connection connection = DriverManager.getConnection(url, username, password);
 					PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
 
 				preparedStatement.setString(1, dadoNovo);
-				preparedStatement.setString(2, TelaLoginMedicoController.getcrmLogado());
+				preparedStatement.setString(2, TelaLoginPacienteController.getcpfLogado());
 
 				int rowsAffected = preparedStatement.executeUpdate();
 
@@ -137,13 +137,13 @@ public class EditarMedicoController {
 			}
 			return;
 		}
-		if (radioButtonCRM.isSelected()) {
-			String updateQuery = "UPDATE medicoscadastrados " + "SET crm = ? " + "WHERE " + "crm = ?";
+		if (radioButtonCPF.isSelected()) {
+			String updateQuery = "UPDATE pacientes " + "SET cpf = ? " + "WHERE " + "cpf = ?";
 			try (Connection connection = DriverManager.getConnection(url, username, password);
 					PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
 
 				preparedStatement.setString(1, dadoNovo);
-				preparedStatement.setString(2, TelaLoginMedicoController.getcrmLogado());
+				preparedStatement.setString(2, TelaLoginPacienteController.getcpfLogado());
 
 				int rowsAffected = preparedStatement.executeUpdate();
 

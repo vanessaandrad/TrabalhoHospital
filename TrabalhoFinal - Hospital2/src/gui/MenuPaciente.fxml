@@ -4,11 +4,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MenuPacienteController">
    <children>
       <Label layoutX="270.0" layoutY="51.0" text="PACIENTES" />
-      <Button layoutX="14.0" layoutY="91.0" mnemonicParsing="false" text="AGENDAR CONSULTA" />
-      <Button layoutX="14.0" layoutY="130.0" mnemonicParsing="false" text="CANCELAR CONSULTA" />
+      <Button fx:id="botaoAgendarConsulta" layoutX="14.0" layoutY="91.0" mnemonicParsing="false" onAction="#cliqueBotaoAgendarConsulta" text="AGENDAR CONSULTA" />
+      <Button fx:id="botaoCancelarConsulta" layoutX="14.0" layoutY="130.0" mnemonicParsing="false" onAction="#cliqueBotaoCancelarConsulta" text="CANCELAR CONSULTA" />
+      <Button fx:id="botaoEditarDados" layoutX="31.0" layoutY="165.0" mnemonicParsing="false" onAction="#cliqueBotaoEditarDados" text="EDITAR DADOS" />
    </children>
 </AnchorPane>

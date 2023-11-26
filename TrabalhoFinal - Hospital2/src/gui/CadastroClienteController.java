@@ -38,13 +38,14 @@ public class CadastroClienteController {
 	        String nome = textFieldNome.getText();
 	        String idade = textFieldIdade.getText();
 	        String plano = textFieldPlano.getText();
+	        String cpf = textFieldCPF.getText();
 	        String senha = textFieldSenha.getText();
 
-	        String url = "jdbc:mysql://localhost:3306/hospital";
-	        String username = "root";
-	        String password = "demilovato1";
+	        String url = "jdbc:mysql://localhost:3306/bancodetestes";
+	        String username = "developer";
+	        String password = "86779791";
 
-	        String insertQuery = "INSERT INTO pacientes (nome, idade, plano, senha) VALUES (?, ?, ?, ?)";
+	        String insertQuery = "INSERT INTO pacientes (nome, idade, plano, senha, cpf) VALUES (?, ?, ?, ?, ?)";
 
 	        try (Connection connection = DriverManager.getConnection(url, username, password);
 	             PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
@@ -53,6 +54,7 @@ public class CadastroClienteController {
 	            preparedStatement.setString(2, idade);
 	            preparedStatement.setString(3, plano);
 	            preparedStatement.setString(4, senha);
+	            preparedStatement.setString(5, cpf);
 
 	            int rowsAffected = preparedStatement.executeUpdate();
 

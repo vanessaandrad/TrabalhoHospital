@@ -16,12 +16,12 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/vanes/Downloads/json-20231013.jar">
+	<classpathentry kind="lib" path="C:/Users/ianjo/Downloads/json-20231013.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/MySQL Connector">
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/MySQLConnector">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

@@ -27,7 +27,7 @@ public class MenuPrincipalController {
 	@FXML
 	public void cliqueBotaoLoginPaciente() {
 		System.out.println("PACIENTE");
-		//abrirTelaLoginPaciente();
+		abrirTelaLoginPaciente();
 	}
 	
 	public void cliqueBotaoLoginAdministrador() {
@@ -72,7 +72,26 @@ public class MenuPrincipalController {
 	}
 	
 	private void abrirTelaLoginPaciente() {
-		//essa será usada aqui
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaLoginPaciente.fxml"));
+			Parent root = loader.load();
+
+			// Cria uma nova instância de Stage
+			Stage stage = new Stage();
+			stage.setTitle("Tela de Operações");
+
+			// Associa o controller da nova tela ao FXMLLoader
+			// TelaOperacoesController controller = loader.getController();
+
+			// Configura a Scene com o conteúdo carregado do FXML
+			Scene scene = new Scene(root);
+			stage.setScene(scene);
+
+			// Mostra a nova tela
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	

@@ -43,9 +43,9 @@ public class CadastroMedicoController {
         int crm = Integer.parseInt(CRM);
 
        
-        String url = "jdbc:mysql://localhost:3306/hospital";
-        String username = "root";
-        String password = "demilovato1";
+        String url = "jdbc:mysql://localhost:3306/bancodetestes";
+        String username = "developer";
+        String password = "86779791";
 
         String insertQuery = "INSERT INTO medicoscadastrados (nome, especialidade, plano_atendido, senha, crm)"
                 + " VALUES (?, ?, ?, ?, ?)";

@@ -17,5 +17,7 @@
       <Label fx:id="labelMensagem" layoutX="286.0" layoutY="291.0" />
       <Label layoutX="14.0" layoutY="153.0" text="Senha:" />
       <TextField fx:id="textFieldSenha" layoutX="59.0" layoutY="149.0" />
+      <TextField fx:id="textFieldCPF" layoutX="60.0" layoutY="187.0" />
+      <Label layoutX="18.0" layoutY="192.0" text="CPF:" />
    </children>
 </AnchorPane>
