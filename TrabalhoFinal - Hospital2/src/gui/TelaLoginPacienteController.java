@@ -29,6 +29,8 @@ public class TelaLoginPacienteController {
 	private Label labelMensagem;
 	
 	public static String cpfLogado;
+	
+	public static String planoLogado;
 
 	public boolean fazerLogin() {
 		String url = "jdbc:mysql://localhost:3306/bancodetestes";
@@ -47,13 +49,15 @@ public class TelaLoginPacienteController {
             preparedStatement.setString(2, senha);
 
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
-            	cpfLogado = cpf;
-            	abrirMenuPaciente();
-                return resultSet.next(); // If there is a matching user, authentication is successful
+                if (resultSet.next()) { // Move to the first row
+                    cpfLogado = cpf;
+                    planoLogado = resultSet.getString("plano");
+                    abrirMenuPaciente();
+                    return true; // If there is a matching user, authentication is successful
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            labelMensagem.setText("Erro ao realizar o cadastro.");
         }
 		return false;
 	}
@@ -74,5 +78,9 @@ public class TelaLoginPacienteController {
 
 	public static String getcpfLogado() {
 		return cpfLogado;
+	}
+	
+	public static String getPlanoLogado() {
+		return planoLogado;
 	}
 }

@@ -59,7 +59,7 @@ public class CadastroClienteController {
 		String senha = textFieldSenha.getText();
 
 		// Check if the checkBoxPlano is selected
-		String plano = checkBoxPlano.isSelected() ? textFieldPlano.getText() : "";
+		String plano = checkBoxPlano.isSelected() ? textFieldPlano.getText() : null;
 
 		String url = "jdbc:mysql://localhost:3306/bancodetestes";
 		String username = "developer";
