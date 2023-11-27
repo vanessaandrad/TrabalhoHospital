@@ -61,9 +61,9 @@ public class CadastroClienteController {
 		// Check if the checkBoxPlano is selected
 		String plano = checkBoxPlano.isSelected() ? textFieldPlano.getText() : null;
 
-		String url = "jdbc:mysql://localhost:3306/bancodetestes";
-		String username = "developer";
-		String password = "86779791";
+		String url = "jdbc:mysql://localhost:3306/hospital";
+		String username = "root";
+		String password = "demilovato1";
 
 		String insertQuery = "INSERT INTO pacientes (nome, idade, plano, senha, cpf) VALUES (?, ?, ?, ?, ?)";
 

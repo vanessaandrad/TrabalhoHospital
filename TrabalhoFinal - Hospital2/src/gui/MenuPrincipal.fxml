@@ -2,23 +2,30 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MenuPrincipalController">
+<AnchorPane prefHeight="424.0" prefWidth="386.0" style="-fx-background-color: #D2E0FB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MenuPrincipalController">
    <children>
-      <Label layoutX="176.0" layoutY="30.0" text="Sistema Hospital">
+      <Label layoutX="150.0" layoutY="115.0" text="Clínica Unity" textFill="#16438c">
          <font>
-            <Font size="20.0" />
+            <Font name="Arial Rounded MT Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="193.0" layoutY="100.0" prefHeight="20.0" prefWidth="114.0" text="Fazer login como:">
+      <Label layoutX="111.0" layoutY="178.0" prefHeight="22.0" prefWidth="166.0" text="Fazer login como:" textAlignment="CENTER">
          <font>
-            <Font size="14.0" />
+            <Font name="Arial Rounded MT Bold" size="19.0" />
          </font>
       </Label>
-      <Button fx:id="botaoLoginMedico" layoutX="108.0" layoutY="176.0" mnemonicParsing="false" onAction="#cliqueBotaoLoginMedico" text="Médico" />
-      <Button fx:id="botaoLoginPaciente" layoutX="307.0" layoutY="175.0" mnemonicParsing="false" onAction="#cliqueBotaoLoginPaciente" prefHeight="26.0" prefWidth="64.0" text="Paciente" />
-      <Button fx:id="botaoLoginAdministrador" layoutX="193.0" layoutY="237.0" mnemonicParsing="false" onAction="#cliqueBotaoLoginAdministrador" text="Administrador" />
+      <Button fx:id="botaoLoginMedico" layoutX="166.0" layoutY="274.0" mnemonicParsing="false" onAction="#cliqueBotaoLoginMedico" style="-fx-background-color: #39A7FF;" text="Médico" textFill="WHITE" />
+      <Button fx:id="botaoLoginPaciente" layoutX="162.0" layoutY="329.0" mnemonicParsing="false" onAction="#cliqueBotaoLoginPaciente" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #39A7FF;" text="Paciente" textFill="WHITE" />
+      <Button fx:id="botaoLoginAdministrador" layoutX="143.0" layoutY="219.0" mnemonicParsing="false" onAction="#cliqueBotaoLoginAdministrador" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: #39A7FF;" text="Administrador" textFill="WHITE" />
+      <ImageView fitHeight="101.0" fitWidth="114.0" layoutX="143.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/hospital.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

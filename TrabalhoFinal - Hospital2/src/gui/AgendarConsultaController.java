@@ -27,7 +27,7 @@ public class AgendarConsultaController {
 
 	@FXML
 	public void initialize() {
-		String url = "jdbc:mysql://localhost:3306/bancodetestes?useSSL=false";
+		String url = "jdbc:mysql://localhost:3306/hospital?useSSL=false";
 		String username = "developer";
 		String password = "86779791";
 

@@ -33,9 +33,9 @@ public class TelaLoginMedicoController {
 	public static String crmLogado;
 
 	public boolean fazerLogin() {
-		String url = "jdbc:mysql://localhost:3306/bancodetestes";
-        String username = "developer";
-        String password = "86779791";
+		String url = "jdbc:mysql://localhost:3306/hospital";
+        String username = "root";
+        String password = "demilovato1";
         
         String crm = textFieldUsuario.getText();
         String senha = textFieldSenha.getText();
